@@ -1,53 +1,59 @@
 ![LangChain Academy](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/66e9eba1020525eea7873f96_LCA-big-green%20(2).svg)
 
-## Introduction
+## Введение
 
-Welcome to LangChain Academy, Introduction to LangGraph! 
-This is a growing set of modules focused on foundational concepts within the LangChain ecosystem. 
-Module 0 is basic setup and Modules 1 - 5 focus on building in LangGraph, progressively adding more advanced themes.  Module 6 addresses deploying your agents. 
-In each module folder, you'll see a set of notebooks. A link to the LangChain Academy lesson is at the top of each notebook to guide you through the topic. Each module also has a `studio` subdirectory, with a set of relevant graphs that we will explore using the LangGraph API and Studio.
+Добро пожаловать в LangChain Academy, курс «Введение в LangGraph»!
+Это растущий набор модулей, сфокусированных на основных концепциях экосистемы LangChain.
+Модуль 0 посвящен базовой настройке, а Модули с 1 по 5 ориентированы на разработку в LangGraph, постепенно добавляя более сложные темы. Модуль 6 посвящен развертыванию ваших агентов.
+В папке каждого модуля вы найдете набор блокнотов. В верхней части каждого блокнота есть ссылка на урок в LangChain Academy, которая проведет вас через тему. Каждый модуль также имеет подкаталог `studio` с набором соответствующих графов, которые мы будем изучать с помощью LangGraph API и Studio.
 
-## Setup
+## Настройка окружения
 
-### Python version
+### Требования к Python
 
-To get the most out of this course, please ensure you're using Python 3.11 or later. 
-This version is required for optimal compatibility with LangGraph. If you're on an older version, 
-upgrading will ensure everything runs smoothly.
+Для комфортной работы с курсом убедитесь, что у вас установлен Python версии 3.11 или выше. 
+Именно эта версия обеспечивает полную совместимость с LangGraph. Если у вас стоит более старая версия,
+рекомендуем обновиться - это избавит от возможных проблем.
 ```
 python3 --version
 ```
 
-### Clone repo
+### Клонирование репозитория
 ```
+# Русскоязычный форк 
+git clone https://github.com/deevgeny/langchain-academy.git
+$ cd langchain-academy
+
+# Оригинальный репозиторий на английском
 git clone https://github.com/langchain-ai/langchain-academy.git
 $ cd langchain-academy
 ```
-Or, if you prefer, you can download a zip file [here](https://github.com/langchain-ai/langchain-academy/archive/refs/heads/main.zip).
+Или скачайте [ZIP-архив](https://github.com/langchain-ai/langchain-academy/archive/refs/heads/main.zip), если предпочитаете этот способ.
 
-### Create an environment and install dependencies
+### Создание виртуального окружения и установка пакетов
 #### Mac/Linux/WSL
 ```
-$ python3 -m venv lc-academy-env
-$ source lc-academy-env/bin/activate
+$ python3.11 -m venv venv
+$ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 #### Windows Powershell
 ```
-PS> python3 -m venv lc-academy-env
+PS> python3.11 -m venv venv
 PS> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-PS> lc-academy-env\scripts\activate
+PS> venv\scripts\activate
 PS> pip install -r requirements.txt
 ```
 
-### Running notebooks
-If you don't have Jupyter set up, follow the installation instructions [here](https://jupyter.org/install).
+### Работа с блокнотами (Jupyter Notebook)
+Если Jupyter не установлен, воспользуйтесь [официальной инструкцией](https://jupyter.org/install).
 ```
+# Запускаем локальный сервер и выбираем нужный файл
 $ jupyter notebook
 ```
 
-### Setting up env variables
-Briefly going over how to set up environment variables. 
+### Настройка переменных окружения
+Кратко о том, как задавать переменные окружения.
 #### Mac/Linux/WSL
 ```
 $ export API_ENV_VAR="your-api-key-here"
@@ -57,47 +63,47 @@ $ export API_ENV_VAR="your-api-key-here"
 PS> $env:API_ENV_VAR = "your-api-key-here"
 ```
 
-### Set OpenAI API key
-* If you don't have an OpenAI API key, you can sign up [here](https://openai.com/index/openai-api/).
-*  Set `OPENAI_API_KEY` in your environment 
+### Ключ Mistral API
+* Получить ключ Mistral API можно [здесь](https://mistral.ai/).
+* Задайте переменную окружения `MISTRAL_API_KEY`
 
-### Sign up and Set LangSmith API
-* Sign up for LangSmith [here](https://docs.langchain.com/langsmith/create-account-api-key#create-an-account-and-api-key), find out more about LangSmith and how to use it within your workflow [here](https://www.langchain.com/langsmith). 
-*  Set `LANGSMITH_API_KEY`, `LANGSMITH_TRACING_V2=true` `LANGSMITH_PROJECT="langchain-academy"`in your environment 
-*  If you are on the EU instance also set `LANGSMITH_ENDPOINT`="https://eu.api.smith.langchain.com" as well.
+### Регистрация в LangSmith
+* Создайте аккаунт LangSmith [по этой ссылке](https://docs.langchain.com/langsmith/create-account-api-key#create-an-account-and-api-key). Подробнее о возможностях платформы читайте [в документации](https://www.langchain.com/langsmith).
+* Задайте следующие переменные окружения: `LANGSMITH_API_KEY`, `LANGSMITH_TRACING_V2=true`, `LANGSMITH_PROJECT="langchain-academy"`
+* Пользователям европейского сервера дополнительно укажите `LANGSMITH_ENDPOINT`="https://eu.api.smith.langchain.com".
 
-### Set up Tavily API for web search
+### API-ключ Tavily для веб-поиска
 
-* Tavily Search API is a search engine optimized for LLMs and RAG, aimed at efficient, 
-quick, and persistent search results. 
-* You can sign up for an API key [here](https://tavily.com/). 
-It's easy to sign up and offers a very generous free tier. Some lessons (in Module 4) will use Tavily. 
+* Tavily Search API - это поисковой движок, созданный специально для языковых моделей и RAG-систем. 
+Он обеспечивает быстрый и стабильный поиск.
+* Зарегистрируйтесь и получите ключ [на сайте](https://tavily.com/).
+Регистрация занимает минуту, а бесплатный тариф весьма щедрый. Tavily понадобится в некоторых уроках Модуля 4.
 
-* Set `TAVILY_API_KEY` in your environment.
+* Задайте переменную окружения `TAVILY_API_KEY`.
 
-### Set up Studio
+### Работа со Studio
 
-* Studio is a custom IDE for viewing and testing agents.
-* Studio can be run locally and opened in your browser on Mac, Windows, and Linux.
-* See documentation [here](https://docs.langchain.com/langsmith/studio#local-development-server) on the local Studio development server. 
-* Graphs for LangGraph Studio are in the `module-x/studio/` folders for module 1-5.
-* To start the local development server, run the following command in your terminal in the `/studio` directory in each module:
+* Studio - это специальная среда разработки для создания и отладки агентов.
+* Она работает локально и открывается в браузере на любой ОС.
+* Подробности о локальном сервере разработки читайте [в документации](https://docs.langchain.com/langsmith/studio#local-development-server).
+* Готовые графы для LangGraph Studio лежат в папках `module-x/studio/` (модули 1-5).
+* Для запуска локального сервера перейдите в папку `/studio` нужного модуля и выполните:
 
 ```
 langgraph dev
 ```
 
-You should see the following output:
+В ответ вы должны увидеть:
 ```
 - 🚀 API: http://127.0.0.1:2024
 - 🎨 Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
 - 📚 API Docs: http://127.0.0.1:2024/docs
 ```
 
-Open your browser and navigate to the Studio UI: `https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024`.
+Теперь откройте в браузере Studio UI: `https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024`.
 
-* To use Studio, you will need to create a .env file with the relevant API keys
-* Run this from the command line to create these files for module 1 to 5, as an example:
+* Для работы со Studio понадобятся API-ключи, которые хранятся в файле .env
+* Чтобы создать эти файлы для модулей 1-5, выполните команду:
 ```
 for i in {1..5}; do
   cp module-$i/studio/.env.example module-$i/studio/.env
@@ -105,3 +111,16 @@ for i in {1..5}; do
 done
 echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 ```
+
+## Модули
+
+### О курсе
+1. [Коротко о курсе](https://github.com/deevgeny/langchain-academy/blob/main/module-0/basics.ipynb)
+
+### Введение
+1. [Граф (Graph)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/simple-graph.ipynb)
+2. [Цепочка (Chain)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/chain.ipynb)
+3. [Маршрутизатор (Router)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/router.ipynb)
+4. [Агент (Agent)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/agent.ipynb)
+5. [Агент с памятью (Agent with memory)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/agent-memory.ipynb)
+6. [Развертывание (Deployment)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/deployment.ipynb)
