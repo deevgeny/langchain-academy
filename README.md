@@ -124,3 +124,6 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 4. [Агент (Agent)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/agent.ipynb)
 5. [Агент с памятью (Agent with memory)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/agent-memory.ipynb)
 6. [Развертывание (Deployment)](https://github.com/deevgeny/langchain-academy/blob/main/module-1/deployment.ipynb)
+
+### Состояние и память
+1. [Схема состояния](https://github.com/deevgeny/langchain-academy/blob/main/module-2/state-schema.ipynb)
