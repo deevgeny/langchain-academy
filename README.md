@@ -128,3 +128,4 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 ### Состояние и память
 1. [Схема состояния](https://github.com/deevgeny/langchain-academy/blob/main/module-2/state-schema.ipynb)
 2. [Редьюсеры состояния](https://github.com/deevgeny/langchain-academy/blob/main/module-2/state-reducers.ipynb)
+3. [Множественные схемы](https://github.com/deevgeny/langchain-academy/blob/main/module-2/multiple-schemas.ipynb)
