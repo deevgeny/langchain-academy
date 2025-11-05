@@ -132,3 +132,10 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 4. [Фильтрация и очистка сообщений](https://github.com/deevgeny/langchain-academy/blob/main/module-2/trim-filter-messages.ipynb)
 5. [Чат-бот с суммаризацией сообщений](https://github.com/deevgeny/langchain-academy/blob/main/module-2/chatbot-summarization.ipynb)
 6. [Чат-бот с суммаризацией сообщений и внешней памятью БД](https://github.com/deevgeny/langchain-academy/blob/main/module-2/chatbot-external-memory.ipynb)
+
+### UX и человеческое участие (Human-in-the-Loop)
+1. [Стриминг (streaming)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/streaming-interruptions.ipynb)
+2. [Точки прерывания (breakpoints)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/breakpoints.ipynb)
+3. [Редактирование состояния графа (edit graph state)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/edit-state-human-feedback.ipynb)
+4. [Динамические точки прерывания (dynamic breakpoints)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/dynamic-breakpoints.ipynb)
+5. [Навигация по истории состояний (time travel)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/time-travel.ipynb)
