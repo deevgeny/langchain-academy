@@ -129,3 +129,6 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 1. [Схема состояния](https://github.com/deevgeny/langchain-academy/blob/main/module-2/state-schema.ipynb)
 2. [Редьюсеры состояния](https://github.com/deevgeny/langchain-academy/blob/main/module-2/state-reducers.ipynb)
 3. [Множественные схемы](https://github.com/deevgeny/langchain-academy/blob/main/module-2/multiple-schemas.ipynb)
+4. [Фильтрация и очистка сообщений](https://github.com/deevgeny/langchain-academy/blob/main/module-2/trim-filter-messages.ipynb)
+5. [Чат-бот с суммаризацией сообщений](https://github.com/deevgeny/langchain-academy/blob/main/module-2/chatbot-summarization.ipynb)
+6. [Чат-бот с суммаризацией сообщений и внешней памятью БД](https://github.com/deevgeny/langchain-academy/blob/main/module-2/chatbot-external-memory.ipynb)
