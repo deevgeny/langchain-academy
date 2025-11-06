@@ -139,3 +139,9 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 3. [Редактирование состояния графа (edit graph state)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/edit-state-human-feedback.ipynb)
 4. [Динамические точки прерывания (dynamic breakpoints)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/dynamic-breakpoints.ipynb)
 5. [Навигация по истории состояний (time travel)](https://github.com/deevgeny/langchain-academy/blob/main/module-3/time-travel.ipynb)
+
+### Создание ассистента
+1. [Параллелизация (parallelization)](https://github.com/deevgeny/langchain-academy/blob/main/module-4/parallelization.ipynb)
+2. [Подграфы (sub-graphs)](https://github.com/deevgeny/langchain-academy/blob/main/module-4/sub-graphs.ipynb)
+3. [Map-reduce](https://github.com/deevgeny/langchain-academy/blob/main/module-4/map-reduce.ipynb)
+4. [Исследовательский ассистент](https://github.com/deevgeny/langchain-academy/blob/main/module-4/research-assistant.ipynb)
