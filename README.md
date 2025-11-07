@@ -145,3 +145,13 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 2. [Подграфы (sub-graphs)](https://github.com/deevgeny/langchain-academy/blob/main/module-4/sub-graphs.ipynb)
 3. [Map-reduce](https://github.com/deevgeny/langchain-academy/blob/main/module-4/map-reduce.ipynb)
 4. [Исследовательский ассистент](https://github.com/deevgeny/langchain-academy/blob/main/module-4/research-assistant.ipynb)
+
+### Долговременная память (Long-Term Memory)
+Здесь много ошибок, нужно актуализировать версии библиотек и исправить код...
+1. [Чат-бот с памятью](https://github.com/deevgeny/langchain-academy/blob/main/module-5/memory-store.ipynb)
+2. [Чат-бот со схемой профиля](https://github.com/deevgeny/langchain-academy/blob/main/module-5/memoryschema-profile.ipynb)
+3. [Чат-бот со схемой коллекции](https://github.com/deevgeny/langchain-academy/blob/main/module-5/memoryschema-collection.ipynb)
+
+### Деплой
+
+В очереди...
